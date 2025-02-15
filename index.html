@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/modern-normalize.css" />
+    <link rel="stylesheet" href="css/styles.min.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container-header">
+        <img class="calculator__image" src="images/logo.svg" alt="logo" />
+      </div>
+      <div class="container">
+        <div class="calculator">
+          <div class="calculator__forms">
+            <form class="calculator__form--bill" novalidate>
+              <p class="calculator__input--container">
+                <label for="bill">Bill</label>
+                <img
+                  class="calculator__icon--dollar"
+                  src="images/icon-dollar.svg"
+                />
+                <input
+                  type="number"
+                  id="bill"
+                  placeholder="0"
+                  step="0.01"
+                  class="calculator__form--input"
+                />
+              </p>
+            </form>
+            <h2 class="calculator__subtitle">Select Tip %</h2>
+            <div class="calculator__button-container">
+              <button class="calculator__btn">5%</button>
+              <button class="calculator__btn">10%</button>
+              <button class="calculator__btn">15%</button>
+              <button class="calculator__btn">25%</button>
+              <button class="calculator__btn">50%</button>
+              <form class="calculator__btn--custom" novalidate>
+                <p>
+                  <input
+                    type="number"
+                    placeholder="Custom"
+                    class="calculator__btn--input"
+                  />
+                </p>
+              </form>
+            </div>
+            <form class="calculator__form--people" novalidate>
+              <p class="calculator__input--container">
+                <label for="people">Number of People</label>
+                <img
+                  class="calculator__icon--person"
+                  src="images/icon-person.svg"
+                />
+                <input
+                  type="number"
+                  id="bill"
+                  placeholder="0"
+                  class="calculator__form--input"
+                />
+              </p>
+            </form>
+          </div>
+          <div class="calculator__result">
+            <div class="calculator__amount">
+              <h2 class="calculator__tip">Tip Amount</h2>
+              <span class="calculator__sum">$0.00</span>
+              <div class="calculator__person">/ person</div>
+            </div>
+            <div class="calculator__total">
+              <h2 class="calculator__tip">Total</h2>
+              <span class="calculator__sum">$0.00</span>
+              <div class="calculator__person">/ person</div>
+            </div>
+            <button class="calculator__reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
