@@ -1,3 +1,6 @@
+// * {
+//   outline: 1px solid red;
+// }
 %centered {
   display: flex;
   justify-content: center;
@@ -20,6 +23,7 @@ body {
   min-height: 100vh;
   background-color: #c5e4e7;
   font-family: "Space Mono";
+  overflow-x: hidden;
 }
 
 .container-header {
@@ -225,7 +229,7 @@ body {
       }
     }
     &__button-container {
-      width: 315px;
+      width: 320px;
     }
     &__reset {
       margin-left: 14px;
@@ -275,8 +279,15 @@ body {
 
 @media (max-width: 390px) {
   body {
-    background-color: #fff;
+    background-color: #c5e4e7;
   }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .container-header {
     background-color: #c5e4e7;
     padding-bottom: 40.86px;
@@ -284,6 +295,10 @@ body {
   .calculator {
     box-shadow: none;
     margin: 0;
+    border-radius: 25px 25px 0 0;
+    &__image {
+      padding-top: 96px;
+    }
     &__forms {
       margin: 0;
     }
