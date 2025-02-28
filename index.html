@@ -33,12 +33,13 @@
             <form class="calculator__form--bill" novalidate>
               <p class="calculator__input--container">
                 <label for="bill">Bill</label>
+                <span id="billError"></span>
                 <img
                   class="calculator__icon--dollar"
                   src="images/icon-dollar.svg"
                 />
                 <input
-                  type="number"
+                  type="text"
                   id="bill"
                   placeholder="0"
                   step="0.01"
@@ -48,17 +49,18 @@
             </form>
             <h2 class="calculator__subtitle">Select Tip %</h2>
             <div class="calculator__button-container">
-              <button class="calculator__btn">5%</button>
-              <button class="calculator__btn">10%</button>
-              <button class="calculator__btn">15%</button>
-              <button class="calculator__btn">25%</button>
-              <button class="calculator__btn">50%</button>
+              <button class="calculator__btn" data-percent="5">5%</button>
+              <button class="calculator__btn" data-percent="10">10%</button>
+              <button class="calculator__btn" data-percent="15">15%</button>
+              <button class="calculator__btn" data-percent="25">25%</button>
+              <button class="calculator__btn" data-percent="50">50%</button>
               <form class="calculator__btn--custom" novalidate>
                 <p>
                   <input
-                    type="number"
+                    type="text"
                     placeholder="Custom"
                     class="calculator__btn--input"
+                    id="tip-input"
                   />
                 </p>
               </form>
@@ -66,13 +68,14 @@
             <form class="calculator__form--people" novalidate>
               <p class="calculator__input--container">
                 <label for="people">Number of People</label>
+                <span id="peopleError"></span>
                 <img
                   class="calculator__icon--person"
                   src="images/icon-person.svg"
                 />
                 <input
-                  type="number"
-                  id="bill"
+                  type="text"
+                  id="people"
                   placeholder="0"
                   class="calculator__form--input"
                 />
@@ -82,18 +85,19 @@
           <div class="calculator__result">
             <div class="calculator__amount">
               <h2 class="calculator__tip">Tip Amount</h2>
-              <span class="calculator__sum">$0.00</span>
+              <span class="calculator__sum" id="per-person-sum">$0.00</span>
               <div class="calculator__person">/ person</div>
             </div>
             <div class="calculator__total">
               <h2 class="calculator__tip">Total</h2>
-              <span class="calculator__sum">$0.00</span>
+              <span class="calculator__sum" id="total-sum">$0.00</span>
               <div class="calculator__person">/ person</div>
             </div>
-            <button class="calculator__reset">Reset</button>
+            <button class="calculator__reset" id="reset">Reset</button>
           </div>
         </div>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

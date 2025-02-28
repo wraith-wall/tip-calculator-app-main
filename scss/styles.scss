@@ -97,6 +97,9 @@ body {
   label {
     @extend %subtitle;
   }
+  input:focus::placeholder {
+    color: transparent;
+  }
   &__subtitle {
     @extend %subtitle;
     margin-top: 47px;
@@ -136,6 +139,10 @@ body {
       text-align: center;
       color: #547878;
       padding: 0;
+      &:focus {
+        outline: none;
+        border: 2px solid #26c2ae;
+      }
     }
   }
   &__result {
